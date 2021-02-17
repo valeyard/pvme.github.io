@@ -7,10 +7,24 @@
 - Embed: wiki links
 - Embed: google docs
 - Obtain discord usernames using discord API/bot
-- Colored roles
-- Fix git-revision-date (date shown at the bottom of the page) for unversioned files
+- Use the same channel structure as the pvme discord
+
 
 ## Release notes
+
+### January 9, 2021
+
+- Added colored roles
+- Updated missing Discord links
+- Added WiP Slayer Category
+
+### January 4, 2021
+
+- Added, and enabled by default, debug logging to quickly check missing Discord links (check daily build log)
+
+### December 18, 2020
+
+- "last updated on" only on "Home" page (since the page is updated daily)
 
 ### December 17, 2020
 

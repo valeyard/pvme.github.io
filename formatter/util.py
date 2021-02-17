@@ -5,11 +5,14 @@ import os
 import functools
 import re
 import pathlib
-import json
+import logging
 
 import gspread
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 import requests
+
+logger = logging.getLogger('formatter.util')
+logger.level = logging.WARN
 
 GS_URL = os.environ.get('GS_URL')
 GS_PRIVATE_KEY = os.environ.get('GS_PRIVATE_KEY')
@@ -43,11 +46,11 @@ def obtain_pvme_spreadsheet_data(worksheet: str) -> dict:
 
         worksheet = sh.worksheet(worksheet)
     except ValueError as e:
-        print(f"PVME-spreadsheet ValueError: {e}")
+        logger.warning(f"PVME-spreadsheet ValueError: {e}")
     except gspread.exceptions.GSpreadException as e:
-        print(f"PVME-spreadsheet GSpreadException: {e}")
+        logger.warning(f"PVME-spreadsheet GSpreadException: {e}")
     except Exception as e:
-        print(f"PVME-spreadsheet Exception: {e}")
+        logger.warning(f"PVME-spreadsheet Exception: {e}")
     else:
         return worksheet.get_all_values()
 
@@ -160,16 +163,19 @@ def parse_user_id_file() -> dict:
 
 
 def parse_role_id_file() -> dict:
-    """Generate a lookup table (dict) with the following content: {role_id: channel_name}.
+    """Generate a lookup table (dict) with the following content: {role_id: (channel_name, style)}.
 
     :return: lookup table (dict), when no file is discovered, an empty dict is returned
     """
     role_id_file = f"{MODULE_PATH}/discord_roles.txt"
     if os.path.exists(role_id_file):
         with open(role_id_file, 'r') as file:
-            # create dict from regex list of tuples containing group(role_id), group(role_name)
-            role_lookup = dict(re.findall(r"([0-9]{18})\|([^|]+)\|", file.read()))
+            # create dict from regex list of tuples containing group(role_id): (group(role_name), group(style))
+            role_lookup = dict()
+            for match in re.finditer(r"([0-9]{18})\|([^|]+)\|([^|]+)\|", file.read()):
+                role_lookup[match.group(1)] = (match.group(2), match.group(3))
     else:
         role_lookup = dict()
 
     return role_lookup
+

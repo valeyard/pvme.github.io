@@ -1,5 +1,9 @@
 site_name: PVME Guides
 
+google_analytics:
+- UA-189398108-1
+- auto
+  
 theme:
   name: material
   custom_dir: overrides
@@ -12,7 +16,8 @@ theme:
 
 plugins:
 - search
-- git-revision-date-localized
+#- git-revision-date-localized
+- macros
 
 markdown_extensions:
 - pymdownx.keys
@@ -45,6 +50,7 @@ nav:
   - pvme-guides/upgrading-info/upgrade-order.md
 - Miscellaneous information:
   - pvme-guides/miscellaneous-information/ability-information.md
+  - pvme-guides/miscellaneous-information/eof-specs.md
   - pvme-guides/miscellaneous-information/mechanics.md
 - Dpm advice:
   - pvme-guides/dpm-advice/dpm-advice-faq.md
@@ -84,6 +90,7 @@ nav:
   - pvme-guides/high-tier-pvm/rots.md
   - pvme-guides/high-tier-pvm/solak-7s.md
   - pvme-guides/high-tier-pvm/solak-duo.md
+  - pvme-guides/high-tier-pvm/solak-rotations.md
   - pvme-guides/high-tier-pvm/telos-0-999.md
   - pvme-guides/high-tier-pvm/telos-1k-plus-magic.md
   - pvme-guides/high-tier-pvm/telos-1k-plus-melee.md
@@ -96,3 +103,13 @@ nav:
   - pvme-guides/high-tier-pvm/vorago-trio-hm.md
   - pvme-guides/high-tier-pvm/vorago.md
   - pvme-guides/high-tier-pvm/yakamaru.md
+- Slayer:
+  - pvme-guides/slayer/ed2-hydrix.md
+  - pvme-guides/slayer/moss-golems.md
+  - pvme-guides/slayer/nightmare-creatures.md
+  - pvme-guides/slayer/optimal_block_prefer_lists.md
+  - pvme-guides/slayer/overview-of-slayer.md
+  - pvme-guides/slayer/raptor-mobs.md
+  - pvme-guides/slayer/ripper-demon.md
+  - pvme-guides/slayer/slaying-to-120-for-xp.md
+  - pvme-guides/slayer/soul-devourers.md
