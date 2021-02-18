@@ -28,6 +28,9 @@ jobs:
           GS_CLIENT_EMAIL: ${{secrets.GS_CLIENT_EMAIL}}
           GS_TOKEN_URI: ${{secrets.GS_TOKEN_URI}}
 
+      - name: Make some...enhancements...to the generated markdown
+        run: pipenv run python enhance.py
+
       - name: Update website
         run:
           pipenv run mkdocs gh-deploy --force
