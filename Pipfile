@@ -7,4 +7,5 @@ mkdocs-material = "*"
 requests = "*"
 "ruamel.yaml" = "*"
 mkdocs-macros-plugin = "*"
+emoji = "*"
 
