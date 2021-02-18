@@ -31,7 +31,7 @@ jobs:
           GS_TOKEN_URI: ${{secrets.GS_TOKEN_URI}}
 
       - name: Make some...enhancements...to the generated markdown
-        run: python enhance.py
+        run: pipenv run python enhance.py
 
       - name: Update website
         run:
