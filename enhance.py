@@ -14,7 +14,6 @@ for guide in data.values():
         else:
             if line != "\n":
                 guide[i] = emojify(line)
-                print(guide[i])
 
 for fpath, flines in data.items():
     with open(fpath, "w", encoding='utf-8') as file:
