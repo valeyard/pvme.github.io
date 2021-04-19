@@ -1,0 +1,1443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/logo.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Eof specs - PVME Guides</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-189398108-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eof-specs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="PVME Guides" class="md-header__button md-logo" aria-label="PVME Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PVME Guides
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Eof specs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="PVME Guides" class="md-nav__button md-logo" aria-label="PVME Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PVME Guides
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Information
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Information" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information/contribution-quick-start/" class="md-nav__link">
+        Contribution quick start
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information/mastery-system-reqs/" class="md-nav__link">
+        Mastery system reqs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Getting started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/bossing-path/" class="md-nav__link">
+        Bossing path 🛣
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/interface-guide/" class="md-nav__link">
+        Interface guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/perk-info/" class="md-nav__link">
+        Perk ⏫ info
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/perks/" class="md-nav__link">
+        Perks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quick-start/" class="md-nav__link">
+        Quick start 💯
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/revo-to-full-manual/" class="md-nav__link">
+        Revo to ⚖💦 full manual
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Upgrading info
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upgrading info" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrading info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrading-info/armour-and-weapons/" class="md-nav__link">
+        Armour and 👏 weapons
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrading-info/consumables/" class="md-nav__link">
+        Consumables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrading-info/permanent-unlocks/" class="md-nav__link">
+        Permanent unlocks 🔐🔐
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrading-info/unlockable-abilities/" class="md-nav__link">
+        Unlockable abilities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrading-info/upgrade-order/" class="md-nav__link">
+        Upgrade order ❌
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Miscellaneous information
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Miscellaneous information" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Miscellaneous information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ability-information/" class="md-nav__link">
+        Ability 👉👉 information 📚📄
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Eof specs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Eof specs
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranged" class="md-nav__link">
+    Ranged 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melee" class="md-nav__link">
+    Melee 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magic" class="md-nav__link">
+    Magic 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        Mechanics
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Dpm advice
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dpm advice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Dpm advice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-advice/dpm-advice-faq/" class="md-nav__link">
+        Dpm advice faq
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-advice/dpm-advice-mage/" class="md-nav__link">
+        Dpm advice 👏👏 mage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-advice/dpm-advice-melee/" class="md-nav__link">
+        Dpm advice 🗣 melee
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-advice/dpm-advice-range/" class="md-nav__link">
+        Dpm advice 👏 range
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Low tier pvm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Low tier pvm" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Low tier pvm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/barrows/" class="md-nav__link">
+        Barrows
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/chaos-elemental/" class="md-nav__link">
+        Chaos elemental
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/dagannoth-kings/" class="md-nav__link">
+        Dagannoth kings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/giant-mole/" class="md-nav__link">
+        Giant 😱 mole
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/gwd1/" class="md-nav__link">
+        Gwd1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/kalphite-queen/" class="md-nav__link">
+        Kalphite queen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../low-tier-pvm/king-black-dragon/" class="md-nav__link">
+        King 😂🏿 black dragon
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Mid tier pvm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mid tier pvm" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Mid tier pvm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/corporeal-beast/" class="md-nav__link">
+        Corporeal beast 😋🔞
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/fight-kiln/" class="md-nav__link">
+        Fight 👌💥 kiln
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/gregorovic/" class="md-nav__link">
+        Gregorovic
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/helwyr/" class="md-nav__link">
+        Helwyr
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/kalphite-king/" class="md-nav__link">
+        Kalphite king 🤴👑
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/legiones/" class="md-nav__link">
+        Legiones
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/queen-black-dragon/" class="md-nav__link">
+        Queen black dragon 🐲🐉
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/twin-furies/" class="md-nav__link">
+        Twin furies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mid-tier-pvm/vindicta/" class="md-nav__link">
+        Vindicta
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        High tier pvm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="High tier pvm" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          High tier pvm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/araxxor-melee/" class="md-nav__link">
+        Araxxor melee
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/araxxor-range/" class="md-nav__link">
+        Araxxor range
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/beastmaster-durzag/" class="md-nav__link">
+        Beastmaster durzag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/magister/" class="md-nav__link">
+        Magister
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/raksha/" class="md-nav__link">
+        Raksha
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/rots/" class="md-nav__link">
+        Rots
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/solak-mechanics/" class="md-nav__link">
+        Solak mechanics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/solak-rotations/" class="md-nav__link">
+        Solak rotations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high-tier-pvm/yakamaru/" class="md-nav__link">
+        Yakamaru
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Slayer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Slayer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Slayer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/ed2-hydrix/" class="md-nav__link">
+        Ed2 hydrix
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/moss-golems/" class="md-nav__link">
+        Moss golems
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/nightmare-creatures/" class="md-nav__link">
+        Nightmare creatures
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/optimal-block-prefer-lists/" class="md-nav__link">
+        Optimal block prefer 😘 lists 📇
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/overview-of-slayer/" class="md-nav__link">
+        Overview of slayer 💦🍆
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/raptor-mobs/" class="md-nav__link">
+        Raptor mobs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/ripper-demon/" class="md-nav__link">
+        Ripper demon 👺
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/shattered-worlds-slayer/" class="md-nav__link">
+        Shattered worlds 😄 slayer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/slaying-to-120-for-xp/" class="md-nav__link">
+        Slaying to 120 for xp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slayer/soul-devourers/" class="md-nav__link">
+        Soul devourers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranged" class="md-nav__link">
+    Ranged 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melee" class="md-nav__link">
+    Melee 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magic" class="md-nav__link">
+    Magic 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="eof-specs">Eof specs</h1>
+<h2 id="intro">Intro</h2>
+<p>The Essence of Finality <img title="eof" class="emoji" alt="eof" src="https://cdn.discordapp.com/emojis/787526151978614824.png?v=1"> <img title="eofor" class="emoji" alt="eofor" src="https://cdn.discordapp.com/emojis/745279787471470713.png?v=1"> is an amulet which combines the Amulet of Souls <img title="aos" class="emoji" alt="aos" src="https://cdn.discordapp.com/emojis/513190158359724056.png?v=1"> and Reaper Necklace <img title="Reaper" class="emoji" alt="Reaper" src="https://cdn.discordapp.com/emojis/513190159412494367.png?v=1"> passives, as well as lets you store a special attack <img title="spec" class="emoji" alt="spec" src="https://cdn.discordapp.com/emojis/537340400273195028.png?v=1">. This special attack can then be used through the Essence of Finality ability <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> in the Constitution <img title="Constitution" class="emoji" alt="Constitution" src="https://cdn.discordapp.com/emojis/689509250887712902.png?v=1"> ability book. These specs can be broken down into the following categories:</p>
+<p><strong><ins>Direct Upgrades</ins></strong></p>
+<p>⬥ Dark Bow <img title="dbow" class="emoji" alt="dbow" src="https://cdn.discordapp.com/emojis/643848618553507843.png?v=1"></p>
+<p>⬥ Seren Godbow <img title="sgb" class="emoji" alt="sgb" src="https://cdn.discordapp.com/emojis/626466665848242186.png?v=1"> (Ranged camp)</p>
+<p>⬥ Guthix Staff <img title="gstaff" class="emoji" alt="gstaff" src="https://cdn.discordapp.com/emojis/513203008608141314.png?v=1"></p>
+<p><strong><ins>Expensive/Niche Specs</ins></strong></p>
+<p>⬥ Statius Warhammer <img title="swh" class="emoji" alt="swh" src="https://cdn.discordapp.com/emojis/725106177754660866.png?v=1"></p>
+<p>⬥ Annihilation <img title="annihilation" class="emoji" alt="annihilation" src="https://cdn.discordapp.com/emojis/796989662983094275.png?v=1"></p>
+<p>⬥ Eldritch Crossbow <img title="ecb" class="emoji" alt="ecb" src="https://cdn.discordapp.com/emojis/615618531937222657.png?v=1"></p>
+<p>⬥ Seren Godbow <img title="sgb" class="emoji" alt="sgb" src="https://cdn.discordapp.com/emojis/626466665848242186.png?v=1"> (Offstyle)</p>
+<p><strong><ins>Cheap Versatile Specs</ins></strong></p>
+<p>⬥ Dragon Claws <img title="dragonclaw" class="emoji" alt="dragonclaw" src="https://cdn.discordapp.com/emojis/779048041088024606.png?v=1"> <img title="dragonclawoh" class="emoji" alt="dragonclawoh" src="https://cdn.discordapp.com/emojis/779048040865726485.png?v=1"></p>
+<p>⬥ Dragon Battleaxe <img title="DBA" class="emoji" alt="DBA" src="https://cdn.discordapp.com/emojis/603979368850653216.png?v=1"></p>
+<p>⬥ Dragon Dagger <img title="dragondagger" class="emoji" alt="dragondagger" src="https://cdn.discordapp.com/emojis/779048040644083733.png?v=1"></p>
+<p>⬥ Granite Maul <img title="gmaul" class="emoji" alt="gmaul" src="https://cdn.discordapp.com/emojis/796989663051120640.png?v=1"></p>
+<p>⬥ Korasi's Sword <img title="korasissword" class="emoji" alt="korasissword" src="https://cdn.discordapp.com/emojis/796989663139201034.png?v=1"></p>
+<p>⬥ Magic Shortbow <img title="magicshortbow" class="emoji" alt="magicshortbow" src="https://cdn.discordapp.com/emojis/796989663130026004.png?v=1"></p>
+<p><strong><ins>More In-depth Breakdown of Each Special Attack</ins></strong></p>
+<p>⬥ Any 💦 niche 👦👧 uses 🆒 for 💯 EoF spec weapons will 👏🅱 have 👏👅 their 👧💦 uses in 🏠 the 👏 [boss] guide channels, along 💁 with 👏 how 🅱 worthwhile it 🚫 is 😩 in 🔥🅿 that 🏻 encounter. It 🤔✔ is 😓✅ up 🍅🤢 to 👉 you 😤👈 to determine if 💀 that 👉🚟 niche 👩👩 is 👏👌 something you 😠 would like to 💦💰 invest in. 🔝🍌</p>
+<p>⬥ Ring of Vigour <img title="vigour" class="emoji" alt="vigour" src="https://cdn.discordapp.com/emojis/615613235512737792.png?v=1"> works the same as it would on the respective special attacks.</p>
+<h2 id="ranged">Ranged <img title="range" class="emoji" alt="range" src="https://cdn.discordapp.com/emojis/580168050121113623.png?v=1"></h2>
+<p><strong><ins>Dark Bow</ins></strong> <img title="dbow" class="emoji" alt="dbow" src="https://cdn.discordapp.com/emojis/643848618553507843.png?v=1"> <img title="eofgreen" class="emoji" alt="eofgreen" src="https://cdn.discordapp.com/emojis/780401412727242773.png?v=1"></p>
+<p>⬥ Special 🎁👋 Attack: ⚔ <ins>Descent of 💰 Darkness</ins> ⚫</p>
+<p>‎ ‎ ‎ ‎• Costs 65% adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• 2 😳 hits 👊 that 💵👄 deal 148-338% ability 👉 damage ☠☄ each (regardless 🤷 of 🔴😢 ammo, despite 🙅 the ingame description)</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Big 👅😍 burst damage ☠☠</p>
+<p>⬥ Scenarios it is used 📅🙄</p>
+<p>‎ ‎ ‎ ‎• Nex <img title="Nex" class="emoji" alt="Nex" src="https://cdn.discordapp.com/emojis/513213159071547395.png?v=1">, Vorago <img title="vorago" class="emoji" alt="vorago" src="https://cdn.discordapp.com/emojis/572867742613635082.png?v=1">, Nex: Angel of Death <img title="aod" class="emoji" alt="aod" src="https://cdn.discordapp.com/emojis/580167371365548042.png?v=1">, Barrows: Rise of the Six <img title="Dharokhead" class="emoji" alt="Dharokhead" src="https://cdn.discordapp.com/emojis/513222840162582541.png?v=1"></p>
+<p>⬥ Priority/usefulness ⬆ (at 😝😝 said 💬🗣 scenarios):</p>
+<p><code>High</code> 🙃⏫</p>
+<p><strong><ins>Eldritch Crossbow</ins></strong> <img title="ecb" class="emoji" alt="ecb" src="https://cdn.discordapp.com/emojis/615618531937222657.png?v=1"> <img title="eofpink" class="emoji" alt="eofpink" src="https://cdn.discordapp.com/emojis/780401412865523722.png?v=1"></p>
+<p>⬥ Special 💅 Attack: ⚔ <ins>Split Soul</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 25% adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• For 15 seconds (25 ticks), soulsplit <img title="soulsplit" class="emoji" alt="soulsplit" src="https://cdn.discordapp.com/emojis/615613924506599497.png?v=1"> deals 4x the amount of healing you would have gotten as damage against your target</p>
+<p>‎ ‎ ‎ ‎• EoF will 👏 increase 💳💳 this 😷⁉ effect 📣📣 according 🔛🔛 to its 😙 soulsplit-buffing effect</p>
+<p>‎ ‎ ‎ ‎• Switching 🔥 mainhand weapons will end ✋ the effect, 📣📣 but 🤔🍑 switching amulets will not 🤜🚃</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• ECB spec with 1h/DW/Chins (allows Needle Strike <img title="needle" class="emoji" alt="needle" src="https://cdn.discordapp.com/emojis/535541259108876293.png?v=1"> and Flanking <img title="flank4" class="emoji" alt="flank4" src="https://cdn.discordapp.com/emojis/712073088296157185.png?v=1"> <img title="bindingshot" class="emoji" alt="bindingshot" src="https://cdn.discordapp.com/emojis/535541306563231790.png?v=1"> <img title="tight" class="emoji" alt="tight" src="https://cdn.discordapp.com/emojis/535541275957657600.png?v=1"> under ECB spec)</p>
+<p>⬥ Scenarios it is 🗓 used 👨🙄</p>
+<p>‎ ‎ ‎ ‎• Anywhere you use Ranged <img title="range" class="emoji" alt="range" src="https://cdn.discordapp.com/emojis/580168050121113623.png?v=1"></p>
+<p>⬥ Priority/usefulness ⬆⬆ (at said 👱 scenarios):</p>
+<p><code>Low for 🍅 Ranged Telos, very 📈 low otherwise</code></p>
+<p><strong><ins>Magic Shortbow</ins></strong> <img title="magicshortbow" class="emoji" alt="magicshortbow" src="https://cdn.discordapp.com/emojis/796989663130026004.png?v=1"></p>
+<p>⬥ Special 👋 Attack: ⚔ <ins>Snap-Shot</ins> 🤳😱</p>
+<p>‎ ‎ ‎ ‎• Costs 55% adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• 2 💯 hits 👊👊 that deal 55-200% ability 👉👉 damage ☠☠ each 👋👋</p>
+<p>‎ ‎ ‎ ‎• This 🌈🚟 special ✌ attack has 👩❌ decreased accuracy 👌🏹</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Adren dump for a 💰 bit of 📰 damage ☠</p>
+<p>⬥ Scenarios it is ⁉🏼 used 🎶</p>
+<p>‎ ‎ ‎ ‎• Places 😩💯 where you 👈 would 😵 Dark 🌌 Bow 👒🏹 spec but is 💦 too 🍆😡 slow</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at 🤴🤖 said ♂👄 scenarios):</p>
+<p><code>Very 👌 low</code> 🔽</p>
+<p><strong><ins>Ranged Camp SGB</ins></strong> <img title="range" class="emoji" alt="range" src="https://cdn.discordapp.com/emojis/580168050121113623.png?v=1"> <img title="sgb" class="emoji" alt="sgb" src="https://cdn.discordapp.com/emojis/626466665848242186.png?v=1"> <img title="eofblue" class="emoji" alt="eofblue" src="https://cdn.discordapp.com/emojis/780401412906680330.png?v=1"></p>
+<p>⬥ Special 🎁💅 Attack: ⚔🤼 <ins>Crystal 💎 Rain</ins> 🌧</p>
+<p>‎ ‎ ‎ ‎• Costs 30% adrenaline</p>
+<p>‎ ‎ ‎ ‎• 5 arrows are launched, the first 🥇🔢 landing a tick before the 👏 rest. The 😫 first 🥇👆 will 💎 always have an opportunity to hit, hitchance of 😍💦 the 💳 rest 😊😊 depends 🤔 on 🔛 whether ☂☂ they 😅👥 land 💯⬇ on 👌 game tiles the 👨🅱 target occupies. If 😵 the first splashes, the 👉 rest 💯🚔 will 👏💩 splash as 😥💎 well. ⛲</p>
+<p>‎ ‎ ‎ ‎• 30 ✈✈ second cooldown (not incurred if the first 🥇 arrow 💘 splashes)</p>
+<p>‎ ‎ ‎ ‎• The damage range of the spec is based off of a couple factors, refer to the wiki for specifics: <a href="https://runescape.wiki/w/Seren_godbow#Special_attack">https://runescape.wiki/w/Seren_godbow#Special_attack</a></p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Allows usage of SGB spec with chinchompas <img title="mechchin" class="emoji" alt="mechchin" src="https://cdn.discordapp.com/emojis/641669268722810881.png?v=1">. It is as ridiculous as you can imagine, giving up to 9 simultaneous SGB specs.</p>
+<p>‎ ‎ ‎ ‎• Allows usage of SGB spec under the effect of Eldritch Crossbow <img title="ecb" class="emoji" alt="ecb" src="https://cdn.discordapp.com/emojis/615618531937222657.png?v=1"> spec</p>
+<p>‎ ‎ ‎ ‎• Allows bakriminel bolt procs on the spec, which means a chance for a 55-75k damage spec if using <img title="RubyBakri" class="emoji" alt="RubyBakri" src="https://cdn.discordapp.com/emojis/565726489413287956.png?v=1"></p>
+<p><em>Note: To bolt proc, you require ECB/Asc/BBC <img title="ecb" class="emoji" alt="ecb" src="https://cdn.discordapp.com/emojis/615618531937222657.png?v=1">/<img title="ascmh" class="emoji" alt="ascmh" src="https://cdn.discordapp.com/emojis/513190158468775936.png?v=1"><img title="ascoh" class="emoji" alt="ascoh" src="https://cdn.discordapp.com/emojis/513190159362031631.png?v=1">/<img title="bbc" class="emoji" alt="bbc" src="https://cdn.discordapp.com/emojis/626714879218155521.png?v=1"><img title="bbcoh" class="emoji" alt="bbcoh" src="https://cdn.discordapp.com/emojis/626714879230738434.png?v=1"> to effectively make use of it.</em></p>
+<p>⬥ Scenarios it 😂😞 is used 🏭🚟</p>
+<p>‎ ‎ ‎ ‎• Anywhere you would 👌 SGB spec while 🏻⏳ Ranging (generally 😄 3x3 boss 👨💼 size or larger)</p>
+<p>⬥ Priority/usefulness (at said 🗣🏿 scenarios):</p>
+<p><code>High if 👦🏃 you 🤗 can SGB spec, medium otherwise</code></p>
+<p><strong><ins>Offstyle SGB</ins></strong> <img title="Attack" class="emoji" alt="Attack" src="https://cdn.discordapp.com/emojis/689509250472476758.png?v=1">/<img title="Magic" class="emoji" alt="Magic" src="https://cdn.discordapp.com/emojis/689504724159823906.png?v=1"> <img title="ingen" class="emoji" alt="ingen" src="https://cdn.discordapp.com/emojis/641339234111848463.png?v=1"> <img title="sgb" class="emoji" alt="sgb" src="https://cdn.discordapp.com/emojis/626466665848242186.png?v=1"> <img title="eofblue" class="emoji" alt="eofblue" src="https://cdn.discordapp.com/emojis/780401412906680330.png?v=1"></p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Allows bakriminel bolt procs on the spec, which means a chance for a 55-75k damage spec if using <img title="RubyBakri" class="emoji" alt="RubyBakri" src="https://cdn.discordapp.com/emojis/565726489413287956.png?v=1"></p>
+<p><em>Note: Keep in mind that using EoF SGB offstyle requires at least an extra inventory space to use, when compared to using a normal SGB.</em></p>
+<p>⬥ Scenarios it 😉🔫 is used</p>
+<p>‎ ‎ ‎ ‎• Anywhere you 🍑❤ would ✅ off-style 😝 SGB spec (generally 5x5 boss 😎😂 size 👏💪 or 💰🅱 larger)</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at 👨 said 💬 scenarios):</p>
+<p><code>Low</code> 👏</p>
+<h2 id="melee">Melee <img title="Attack" class="emoji" alt="Attack" src="https://cdn.discordapp.com/emojis/689509250472476758.png?v=1"></h2>
+<p><strong><ins>Annihilation</ins></strong> <img title="annihilation" class="emoji" alt="annihilation" src="https://cdn.discordapp.com/emojis/796989662983094275.png?v=1"></p>
+<p>⬥ Special ✈🎁 Attack: <ins>Gravitate</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 60% adrenaline 💉💉</p>
+<p>‎ ‎ ‎ ‎• When 💕 used, 🆒 for 🍆🤙 30 📅✈ seconds all 👬🤷 successful 📈📈 attacks on your opponent(s) adds a stack, which 🙌 increases ⤴📄 your 😩🏻 damage ☠ by 1% per stack, 📚📚 capping at 20% 🎉🆗</p>
+<p>‎ ‎ ‎ ‎• The special 👩 attack ⚔ will 👏👏 clear 🔎📝 itself 👏 prematurely if: 💵☝ you 👉👈 switch weapons, you 🍆 splash on any 🏼 target, or 💁🙅 if the 🏿🏙 special ✌ attack 🤼 is 👉 used again 🤷🚫 within 👌 30 📅✈ seconds 🕞</p>
+<p>‎ ‎ ‎ ‎• Functionally useless, as you can just use DBA <img title="DBA" class="emoji" alt="DBA" src="https://cdn.discordapp.com/emojis/603979368850653216.png?v=1"> spec and get a similar buff for a minute</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• A 🎉 lasting damage ☠☠ amplifier that 💩😩 allows you 👈👈 to 💦✋ be 🅰🐝 mobile</p>
+<p>‎ ‎ ‎ ‎• Can be used with a Noxious Scythe <img title="noxscythe" class="emoji" alt="noxscythe" src="https://cdn.discordapp.com/emojis/513190159341322240.png?v=1"></p>
+<p>⬥ Scenarios it 🏿 is used</p>
+<p>‎ ‎ ‎ ‎• Possible uses for melee Elite Dungeon mobs and Slayer <img title="slayer" class="emoji" alt="slayer" src="https://cdn.discordapp.com/emojis/797896049548066857.png?v=1"></p>
+<p>⬥ Priority/usefulness (at said 🗣 scenarios):</p>
+<p><code>Very 👤👌 low</code> ⬇</p>
+<p><strong><ins>Dragon Battleaxe</ins></strong> <img title="DBA" class="emoji" alt="DBA" src="https://cdn.discordapp.com/emojis/603979368850653216.png?v=1"></p>
+<p>⬥ Special Attack: <ins>Rampage</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 100% adrenaline</p>
+<p>‎ ‎ ‎ ‎• For 1 minute, increases your melee damage (bleeds included) by 20%. This effect stacks with other melee damage amplifiers, but becomes a 10% damage boost in Berserk <img title="Berserk" class="emoji" alt="Berserk" src="https://cdn.discordapp.com/emojis/513190158468907012.png?v=1"></p>
+<p>‎ ‎ ‎ ‎• Drains Attack <img title="Attack" class="emoji" alt="Attack" src="https://cdn.discordapp.com/emojis/689509250472476758.png?v=1">, Defence <img title="Defence" class="emoji" alt="Defence" src="https://cdn.discordapp.com/emojis/689509250979987525.png?v=1">, Magic <img title="Magic" class="emoji" alt="Magic" src="https://cdn.discordapp.com/emojis/689504724159823906.png?v=1">, and Ranged <img title="range" class="emoji" alt="range" src="https://cdn.discordapp.com/emojis/580168050121113623.png?v=1"> by 10% rounded down. Boosts Strength <img title="Strength" class="emoji" alt="Strength" src="https://cdn.discordapp.com/emojis/689509250879324165.png?v=1"> by 10 levels + 1 for every 4 levels drained in other stats.</p>
+<p>‎ ‎ ‎ ‎• Multiplicative 10% hit 👊💢 chance ♂😱 reduction</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Saves an 🏻 inventory space 😂😫</p>
+<p>⬥ Scenarios it 🎈 is 🐠 used 🙄👨</p>
+<p>‎ ‎ ‎ ‎• In 👏🍑 niche 👦👦 scenarios where you 🥘😍 are using DBA spec but not 🚫🙏 any 💦📨 other spec</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at 👌 said 🗯🗣 scenarios):</p>
+<p><code>Low, ⬇ but 🍑🤔 an extra 🗣🗣 inventory slot is always 💯 helpful</code></p>
+<p><strong><ins>Dragon Claws</ins></strong> <img title="dragonclaw" class="emoji" alt="dragonclaw" src="https://cdn.discordapp.com/emojis/779048041088024606.png?v=1"> <img title="dragonclawoh" class="emoji" alt="dragonclawoh" src="https://cdn.discordapp.com/emojis/779048040865726485.png?v=1"> <img title="eofred" class="emoji" alt="eofred" src="https://cdn.discordapp.com/emojis/780401412839833601.png?v=1"></p>
+<p>⬥ Special ✈💦 Attack: ⚔🤼 <ins>Slice 😛😛 &amp; Dice</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 50% 👏👏 adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• The 📈✊ first 😊🏻 hit 😵🚬 deals between 👈🖕 68-180% damage, ☄☄ the second ⏱ hit 😤😤 deals between 🏻 54-110% of 🏧 the 📐👏 first hit, 👊 and the ⤴👏 final 🔮 two 💏 hits deals 27-55% each. It totals to 176-400% ability 👉👉 damage. ☄☠</p>
+<p>‎ ‎ ‎ ‎• The value 💵 of 🎭 the 😢👄 first 🏻🏻 hit determines what 😨👑 values the 👏👇 follow-up hits 🎯 will 🍆🤔 deal. The 🏻 closer the first 😌 hit is 💦🅱 to the ☝ maximum, the 👏 lower ❌ the 🌊 percentage used 🚟🎶 to 💦👉 calculate the second, ☝✌ third, and 😞 fourth hits, and vice versa.</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Dump a large amount of adrenaline to do lots of damage quickly (relentless proc <img title="relentless5" class="emoji" alt="relentless5" src="https://cdn.discordapp.com/emojis/712244800920748092.png?v=1"> on Berserk <img title="Berserk" class="emoji" alt="Berserk" src="https://cdn.discordapp.com/emojis/513190158468907012.png?v=1"> or at the end of a kill)</p>
+<p>⬥ Scenarios it 💦 is 🔥💦 used</p>
+<p>‎ ‎ ‎ ‎• Melee Telos <img title="Telos" class="emoji" alt="Telos" src="https://cdn.discordapp.com/emojis/513212949033123840.png?v=1">, Seiryu <img title="Seiryu" class="emoji" alt="Seiryu" src="https://cdn.discordapp.com/emojis/583430543321071626.png?v=1"> 1-cycles, has niche uses at experienced Ambassador <img title="Ambassador" class="emoji" alt="Ambassador" src="https://cdn.discordapp.com/emojis/583430542809235458.png?v=1"> and Solak <img title="solak" class="emoji" alt="solak" src="https://cdn.discordapp.com/emojis/580167371310891029.png?v=1"> kills to dump adren before spinners/on core respectively</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at ❤ said 😍💪 scenarios):</p>
+<p><code>High ☝🏿 for 👏💰 Telos, medium/low otherwise</code></p>
+<p><strong><ins>Dragon Dagger</ins></strong> <img title="dragondagger" class="emoji" alt="dragondagger" src="https://cdn.discordapp.com/emojis/779048040644083733.png?v=1"></p>
+<p>⬥ Special 🏽 Attck: <ins>Puncture</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 25% adrenaline 💉💉</p>
+<p>‎ ‎ ‎ ‎• 2 ☀ quick 👀😫 strikes 👏 that deal 40-160% ability 👉 damage each 👏</p>
+<p>‎ ‎ ‎ ‎• This 👈 special 💯 attack 🤼 has 👏 increased ➕➕ accuracy 🏹👌</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• It 🤷 can 🔫🔫 make 🏻🖕 use of 💦💦 excess adrenaline without 🚫♀ being too 🏻 much 😩🍆 of 📆☹ a 🙏 commitment</p>
+<p>⬥ Scenarios it 😭🍆 is 🔥 used 🚟</p>
+<p>‎ ‎ ‎ ‎• Any 🅱🤔</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at 😂 said scenarios):</p>
+<p><code>Low</code> 🔽👏</p>
+<p><strong><ins>Granite Maul</ins></strong> <img title="gmaul" class="emoji" alt="gmaul" src="https://cdn.discordapp.com/emojis/796989663051120640.png?v=1"></p>
+<p>⬥ Special 😂☄ Attack: ⚔ <ins>Quick 🛀 Smash</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 50% 👏👌 adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• Deals 35-176% ability damage ☄☄</p>
+<p>‎ ‎ ‎ ‎• Ignores 😴 all 🤵🏷 cooldowns, including 💨 the global cooldown</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Large 🏔😵 amount of 🔥💦 burst damage in 🛌 a 🅱👌 single tick</p>
+<p>⬥ Scenarios it 💯 is used 😏🚟</p>
+<p>‎ ‎ ‎ ‎• Usually used 🚟 in short 💁💁 speedkills</p>
+<p>⬥ Priority/usefulness ⬆ (at 👸 said 👱😰 scenarios):</p>
+<p><code>High if 👏 speedkilling, very ❗⛪ low otherwise</code></p>
+<p>‎<strong><ins>Korasi's Sword</ins></strong> <img title="korasissword" class="emoji" alt="korasissword" src="https://cdn.discordapp.com/emojis/796989663139201034.png?v=1"></p>
+<p>⬥ Special ✌ Attack: ⚔ <ins>Disrupt</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 60% adrenaline</p>
+<p>‎ ‎ ‎ ‎• Deals 120-320% ability 👉 damage ☠☄ to any 😱💦 enemies adjacent to 🏼👆 the player 🤺🎮</p>
+<p>‎ ‎ ‎ ‎• Deals magic 📿📿 damage ☠☠ but 😱 is 💦💦 calculated entirely 💯 with melee damage ☠ modifiers</p>
+<p>‎ ‎ ‎ ‎• How its accuracy is calculated is still a bit of a mystery, but testing has shown that Magic <img title="Magic" class="emoji" alt="Magic" src="https://cdn.discordapp.com/emojis/689504724159823906.png?v=1"> accuracy modifiers seem to increase the spec's hit chance.</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Big area damage</p>
+<p>⬥ Scenarios it 💰 is ⁉ used</p>
+<p>‎ ‎ ‎ ‎• Almost 😲▶ exclusively at ☺ Shattered Worlds for 😍🍆 a low effort 🙁 method to 💦 level 👌 up 🔺👎 melee gear</p>
+<p>⬥ Priority/usefulness (at 🍆👢 said scenarios):</p>
+<p><code>Medium for ⌛🍆 SW, very 💎👍 low ⬇🔽 otherwise</code></p>
+<p><strong><ins>Statius Warhammer</ins></strong> <img title="swh" class="emoji" alt="swh" src="https://cdn.discordapp.com/emojis/725106177754660866.png?v=1"> <img title="eofblack" class="emoji" alt="eofblack" src="https://cdn.discordapp.com/emojis/780401412915855380.png?v=1"></p>
+<p>⬥ Special 💅 Attack: 🤼⚔ <ins>Smash</ins> 🎯</p>
+<p>‎ ‎ ‎ ‎• Costs 35% adrenaline 💉</p>
+<p>‎ ‎ ‎ ‎• Deals 83-208% ability 👉👉 damage ☠</p>
+<p>‎ ‎ ‎ ‎• Drains 30% of 😂☠ the 👏 target's defence level and 🏻💰 increases 📄📊 affinity by 5 🍆 for ⌛🔯 1 minute ⌚⌚</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• Hammer &gt; auto, cheap hammer specs</p>
+<p>⬥ Scenarios it 🙂💤 is ☺ used 👨</p>
+<p>‎ ‎ ‎ ‎• Nex: Angel of Death <img title="aod" class="emoji" alt="aod" src="https://cdn.discordapp.com/emojis/580167371365548042.png?v=1">, Telos <img title="Telos" class="emoji" alt="Telos" src="https://cdn.discordapp.com/emojis/513212949033123840.png?v=1">, Vorago <img title="vorago" class="emoji" alt="vorago" src="https://cdn.discordapp.com/emojis/572867742613635082.png?v=1">, Raids <img title="BeastmasterDurzag" class="emoji" alt="BeastmasterDurzag" src="https://cdn.discordapp.com/emojis/513212996948983809.png?v=1"><img title="yakahelm2" class="emoji" alt="yakahelm2" src="https://cdn.discordapp.com/emojis/725230791260504144.png?v=1"></p>
+<p>⬥ Priority/usefulness ⬆⬆ (at said 🙈💬 scenarios):</p>
+<p><code>High because 😼 of 🌈 cost reduction</code></p>
+<h2 id="magic">Magic <img title="Magic" class="emoji" alt="Magic" src="https://cdn.discordapp.com/emojis/689504724159823906.png?v=1"></h2>
+<p><strong><ins>Guthix Staff</ins></strong> <img title="gstaff" class="emoji" alt="gstaff" src="https://cdn.discordapp.com/emojis/513203008608141314.png?v=1"> <img title="eofpurple" class="emoji" alt="eofpurple" src="https://cdn.discordapp.com/emojis/780401412936040478.png?v=1"></p>
+<p>⬥ Special ✌ Attack: 🤼 <ins>Claws of Guthix</ins></p>
+<p>‎ ‎ ‎ ‎• Costs 25% 👏 adrenaline</p>
+<p>‎ ‎ ‎ ‎• Deals 140-300% ability damage ☄</p>
+<p>‎ ‎ ‎ ‎• Drains target's defence level 🔻 by 💕 5% 😂 of 🔉 the 🏻👏 base 😢😵 level and 💼 increases ⤴ affinity by 2 👱 for 1 🙅 minute ⌚⌚</p>
+<p>⬥ What <img title="eofspec" class="emoji" alt="eofspec" src="https://cdn.discordapp.com/emojis/746403211908481184.png?v=1"> lets you do that you normally cannot</p>
+<p>‎ ‎ ‎ ‎• 1h/DW Guthix 💚 Staff, Magic ✨ adrenaline 💉 sink 😵😰</p>
+<p>⬥ Scenarios it ❓😤 is used 🎶</p>
+<p>‎ ‎ ‎ ‎• Anywhere you 👧☝ use ℹ👎 Magic 📿✨</p>
+<p>⬥ Priority/usefulness ⬆⬆ (at said 👱💬 scenarios):</p>
+<p><code>High</code> 🙃🚬</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
